@@ -1,25 +1,24 @@
-﻿namespace Basic.CacheManager.Interfaces
+﻿namespace Basic.CacheManager.Interfaces;
+
+public interface ICacheManager
 {
-    public interface ICacheManager
-    {
-        T Get<T>(string key);
+    T Get<T>(string key);
 
-        object Get(string key);
+    object Get(string key);
 
-        object Get(string key, Type type);
+    object Get(string key, Type type);
 
-        void Add(string key, object data, int seconds, Type type);
+    void Add(string key, object data, int seconds, Type type);
 
-        void Add(string key, object data, int seconds);
+    void Add(string key, object data, int seconds);
 
-        void Add(string key, object data, Type type);
+    void Add(string key, object data, Type type);
 
-        void Add(string key, object data);
+    void Add(string key, object data);
 
-        bool IsAdd(string key);
+    bool IsAdd(string key);
 
-        void Remove(string key);
+    void Remove(string key);
 
-        void RemoveByPattern(string pattern);
-    }
+    void RemoveByPattern(string pattern);
 }

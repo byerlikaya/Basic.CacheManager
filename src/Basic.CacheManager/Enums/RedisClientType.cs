@@ -1,9 +1,8 @@
-﻿namespace Basic.CacheManager.Enums
+﻿namespace Basic.CacheManager.Enums;
+
+internal enum RedisClientType
 {
-    internal enum RedisClientType
-    {
-        Master,
-        Slave,
-        Sentinel
-    }
+    Master,
+    Slave,
+    Sentinel
 }
